@@ -46,9 +46,7 @@
                     <a class="item" href="ProductPage.php">
                         Products
                     </a>
-                    <a class="item">
-                        Suggestions
-                    </a>
+                  
                     <a class="item">
                         Contact
                     </a>
@@ -260,7 +258,7 @@ class userData {
             switch ($_REQUEST['user']) {
 
                 case 'submit':
-                    $userId;
+                    $userId=0;
                     $userName = $_POST["name"];
                     $userGender = $_POST["gender"];
                     $userAddress = $_POST["address"];
@@ -286,7 +284,7 @@ class userData {
                     break;
 
                 case 'update':
-                    $sqlInsert = "INSERT INTO user VALUES($userId,'$userName','$userGender','$userAddress','$userEmail',$userContact,'$userLogin','$userPassword');";
+                   // $sqlInsert = "INSERT INTO user VALUES($userId,'$userName','$userGender','$userAddress','$userEmail',$userContact,'$userLogin','$userPassword');";
 
 
 
