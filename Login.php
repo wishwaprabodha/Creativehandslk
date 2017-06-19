@@ -47,8 +47,13 @@
                         Products
                     </a>
                   
-                    <a class="item">
+                    <a class="item" href="ContactPage.php">
                         Contact
+                    </a>
+
+
+                    <a class="item" href="addProduct.php">
+                        Add Products
                     </a>
                 </div>
             </div>

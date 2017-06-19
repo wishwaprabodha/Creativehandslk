@@ -1,7 +1,10 @@
+
+
+
 <html>
 
 <head>
-    <title>productPage</title>
+    <title>contactPage</title>
 
     <link rel="stylesheet" type="text/css" href="Semantic/semantic.min.css">
     <script src="./js/jquery.js"></script>
@@ -35,6 +38,7 @@
         });
     </script>
 
+
 </head>
 <body>
 
@@ -43,110 +47,92 @@
     <div class="sixteen wide column">
 
 
-    <div class="ui inverted secondary pointing fixed menu">
-    <h3 class="item" style="color: black;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
-    <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
-        <a class="item" href="HomePage.php">
-            Home
-        </a>
-        <a class="active item" >
-            Products
-        </a>
+        <div class="ui secondary pointing fixed menu">
+            <h3 class="item" style="color: wheat;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
+            <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
+                <a class="item" href="HomePage.php" ">
+                    Home
+                </a>
+                <a class="item" href="ProductPage.php" ">
+                    Products
+                </a>
 
-        <a class="item" href="ContactPage.php">
-            Contact
-        </a>
+                <a class="item" href="ContactPage.php" ">
+                    Contact
+                </a>
 
-  </div>
-    </div>
+                <a class="active item ">
+                Add Product
+                </a>
+
+            </div>
+        </div>
     </div>
 </div>
 
 
 
 
-    <div style="background-image: url('./img/back2.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 400px">
-        <div class="ui  grid">
+<div style="background-image: url('./img/contact.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 800px">
 
-            <div class="row">
-                <br>
+    <div class="ui grid">
+
+
+        <div class="one column row">
+
+
+            <div class="column">
+                <br><br><br>
+
+                <form class="ui form" id="f1" action="" method="POST" style="padding-left: 20px;padding-right: 140px">
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Product Name</label>
+                            <input type="text" name="pname" placeholder="Product Name" required="">
+                        </div>
+                        <div class="field">
+                            <label>Product Price</label>
+                            <input type="text" name="price" placeholder="Product Price" required="">
+                        </div>
+                    </div>
+
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Catagory A</label>
+                            <input type="text" name="catA" placeholder="Catagory A" required="">
+                        </div>
+                        <div class="field">
+                            <label>Catagory B</label>
+                            <input type="password" name="catB" placeholder="Catagory B" required="">
+                        </div>
+                        <div class="field">
+                            <label>Catagory C</label>
+                            <input type="password" name="catC" placeholder="Catagory C" required="">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <button class="ui button" name="user" type="submit" value="submit">Submit</button>
+                    <button class="ui button" name="user" type="submit" value="update">Update</button>
+                    <button class="ui button" name="user" type="submit" value="update">Search</button>
+
+                </form>
+
+
+
             </div>
 
-            <div class="sixteen wide column"></div>
+            <div class="row"></div>
+            <br><br><br>
 
-            <div class="twelve wide right floated column">
+            <div class="column" style="padding-right: 50px">
 
-                <div class="ui  menu">
-                    <a class="item">
-                        Cards
-                    </a>
-                    <div class="ui pointing dropdown link item">
-                        <span class="text">Gifts</span>
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <div class="item">
-                                <i class="dropdown icon"></i>
-                                <span class="text">Family</span>
-                                <div class="menu">
-                                    <div class="item">For Father</div>
-                                    <div class="item">For Mother</div>
-                                    <div class="item">For Sister</div>
-                                    <div class="item">For Brother</div>
-                                    <div class="item">For Grandma</div>
-                                    <div class="item">For Grandpa</div>
-                                    <div class="item">For Son</div>
-                                    <div class="item">For Daughter</div>
-                                    <div class="item">For Uncle</div>
-                                </div>
-                            </div>
-                            <div class="item">For Him</div>
-                            <div class="item">For Her</div>
-                            <div class="item">For Friend</div>
-                            <div class="item">For Teacher</div>
-                        </div>
-                    </div>
-                    <div class="ui pointing dropdown link item">
-                        <span class="text">Personalized Items</span>
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <div class="item">Clock</div>
-                            <div class="item">Pillow</div>
-                            <div class="item">Photo Frames</div>
-                            <div class="item">Wall Decorations</div>
-                            <div class="item">Plates</div>
-                            <div class="item">Mugs</div>
-                            <div class="item">T-Shirt</div>
-                        </div>
-                    </div>
-                    
-                    <a class="item">
-                        Toys
-                    </a>
-                    <a class="item">
-                        Chocolate
-                    </a>
-                    <a class="item">
-                        Jewellary
-                    </a>
-                    <a class="item">
-                        Fancy Items
-                    </a>
-                    <a class="item">
-                       Flowers
-                    </a>
-                    <a class="item">
-                        Cake
-                    </a>
-                </div>
+                <br><br><br>
 
-                </div>
-        </div>
-
-
-
-        <div class="sixteen column centered ui grid">
-           <?php for ($i=0;$i<3;$i++){
-            echo ' <div class="row"></div>
+                <?php for ($i=0;$i<3;$i++){
+                    echo ' <div class="row"></div>
                 
                 
       
@@ -194,57 +180,107 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="card" style="height: 200px; width: 200px">
+                    
+                     <div class="card" style="height: 200px; width: 200px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
                                     <div class="center">
-                                        <div class="ui inverted button">Crafts</div>
+                                        <div class="ui inverted button">For Him</div>
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/basket.png">
+                            <img src="./img/house.PNG" >
                         </div>
                         <div class="content">
-                            <a class="header">Paper Basket </a>
+                            <a class="header">Clay House</a>
                             <div class="meta">
-                                <span class="date">Rs.250</span>
+                                <span class="date">Rs.300</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                      <div class="card" style="height: 200px; width: 200px">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">Decor</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./img/table.png">
+                        </div>
+                        <div class="content">
+                            <a class="header">Table decor </a>
+                            <div class="meta">
+                                <span class="date">Rs.150</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="card" style="height: 200px; width: 200px">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">For Him</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./img/house.PNG" >
+                        </div>
+                        <div class="content">
+                            <a class="header">Clay House</a>
+                            <div class="meta">
+                                <span class="date">Rs.300</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                      <div class="card" style="height: 200px; width: 200px">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">Decor</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./img/table.png">
+                        </div>
+                        <div class="content">
+                            <a class="header">Table decor </a>
+                            <div class="meta">
+                                <span class="date">Rs.150</span>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="card" style="height: 200px; width: 200px">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                                <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">For Her</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="./img/wall.PNG" >
-                        </div>
-                        <div class="content">
-                            <a class="header">Wall Decor</a>
-                            <div class="meta">
-                                <span class="date">Rs.200</span>
-                            </div>
-                        </div>
-                    </div>
-
+              
 
                 </div>
 
            
           ';}?>
+
+            </div>
+
         </div>
+
+
     </div>
 
 
-    <div style="background-color: #e57373; height: 700px;padding-left: 85px" >
-        </div>
+
+</div>
+
+
+
+
+<div style="background-color: #0e8c8c; height: 400px;padding-left: 85px" >
+</div>
 
 
 
@@ -298,3 +334,18 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Wishwa Prabodha
+ * Date: 15/06/2017
+ * Time: 09:12
+ */
+

@@ -2,6 +2,7 @@
 
 session_start();
 ?>
+<html>
     <head>
         <title>welcomePage</title>
 
@@ -40,10 +41,8 @@ session_start();
                         <a class="item" href="ProductPage.php">
                             Products
                         </a>
-                        <a class="item">
-                            Suggestions
-                        </a>
-                        <a class="item">
+                    
+                        <a class="item" href="ContactPage.php">
                             Contact
                         </a>
                     </div>
@@ -64,10 +63,11 @@ session_start();
                         <a href="Login.php"> <i class="icon user"></i>
                             Login</a>
                     </button>
-                   <?php 
-                   $name=$_SESSION["loggedName"];
-                    echo '<div class="ui large label" style="width: 120px;height: 35px">Hi .$name</div>';
-                ?>
+                   <?php
+                 //  $name=$_SESSION["loggedName"];
+                   ?>
+                    <div class="ui large label" style="width: 120px;height: 35px">Hi User!</div>
+
                 </div>
             </div>
             <div class="ui two column centered grid">
@@ -97,8 +97,9 @@ session_start();
 
             <div class="ui grid">
                 <div class="ui four wide centered column">
-                    <br>
-                    <h3 style="color: black; font-family: cursive;font-size:20px" >Best Sellers</h2>
+                    <div class="row"></div> <br><br>
+                    <div class="row"></div>
+                    <h2 style="color: black; font-family: cursive;font-size:20px" >Best Sellers</h2>
                     <br>
                 </div>
 
@@ -112,7 +113,7 @@ session_start();
 
 
 
-                    <div class="card" style="height: 200px; width: 200px">
+                    <div class="card" style="height: 150px; width: 150px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -133,7 +134,7 @@ session_start();
 
 
 
-                    <div class="card" style="height: 200px; width: 200px">
+                    <div class="card" style="height: 150px; width: 150px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -152,7 +153,7 @@ session_start();
                         </div>
                     </div>
 
-                    <div class="card" style="height: 200px; width: 200px">
+                    <div class="card" style="height: 150px; width: 150px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -172,7 +173,7 @@ session_start();
                     </div>
 
 
-                    <div class="card" style="height: 200px; width: 200px">
+                    <div class="card" style="height: 150px; width: 150px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -181,7 +182,7 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/basket.PNG" >
+                            <img src="./img/wall.PNG" >
                         </div>
                         <div class="content">
                             <a class="header">Wall Decor</a>
@@ -197,12 +198,7 @@ session_start();
             </div>
 
         </div>
-    </div>
-</div>
 
-
-
-</div>
 
 <div class="ui inverted vertical footer segment">
     <br>
@@ -236,9 +232,9 @@ session_start();
         <div class="ui inverted section divider"></div>
 
         <div class="icon">
-            <i class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></i>
-            <i class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></i>
-            <i class="github icon" href="https://github.com/wishwaprabodha"></i>
+            <a class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></a>
+            <a class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></a>
+            <a class="github icon" href="https://github.com/wishwaprabodha"></a>
         </div>
 
 
