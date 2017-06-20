@@ -150,7 +150,7 @@
                 <br><br><br>
 
 
-                <div class="ui large label" style="width: 80px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?></div>
+                <div class="ui large label" style="width: 80px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?>!</div>
 
 
                 <br><br><br>
@@ -330,8 +330,10 @@ class userData
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $nameLogged = $row["userLogin"];
-                    $_SESSION["Uname"] = $nameLogged;
+                    $nameLogged = $row['userLogin'];
+                    $_SESSION['Uid']=$row["userId"];
+                    $_SESSION['Uaccess']=$row["userAccess"];
+                    $_SESSION['Uname'] = $nameLogged;
                 }
             } else {
                 echo "<script>alert('Username/Password is incorrect!')</script>";

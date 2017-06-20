@@ -62,7 +62,7 @@ session_start();
                         <a href="Login.php"> <i class="icon user"></i>
                             Login</a>
                     </button>
-                    <div class="ui large label" style="width: 120px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?>!</div>
+                    <div class="ui large label" style="width: 120px;height: 35px">Hi <?php echo $_SESSION['Uaccess'] ?> !</div>
 
                 </div>
             </div>
