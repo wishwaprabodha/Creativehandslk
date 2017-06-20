@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <html>
 
 <head>
@@ -26,19 +30,18 @@
         });
 
 
-
     </script>
 
 </head>
 <body>
 
 <div style="background-image: url('./img/logSc.PNG');  background-repeat: no-repeat; height: 400px">
-                                
+
     <div class="ui grid">
 
         <div class="sixteen wide column">
-            <div class="ui inverted secondary pointing fixed menu" >
-                <h3 class="item" style="color: wheat;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
+            <div class="ui inverted secondary pointing fixed menu">
+                <h3 class="item" style="color: wheat;font-family: cursive;font-style: inherit">CreativeHandslk</h3>
                 <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
                     <a class="item" href="HomePage.php">
                         Home
@@ -46,7 +49,7 @@
                     <a class="item" href="ProductPage.php">
                         Products
                     </a>
-                  
+
                     <a class="item" href="ContactPage.php">
                         Contact
                     </a>
@@ -61,12 +64,11 @@
     </div>
 
 
+    <div class="ui grid">
 
-        <div class="ui grid">
-
-            <div class="ui vertical divider" style="background-position:center">
-                Or
-            </div>
+        <div class="ui vertical divider" style="background-position:center">
+            Or
+        </div>
 
         <div class="two column row">
 
@@ -75,21 +77,21 @@
 
                 <form class="ui form" id="f1" action="" method="POST" style="padding-left: 40px">
 
-                    
+
                     <div class="field">
                         <label>First Name</label>
                         <input type="text" name="name" placeholder="Name" required="">
                     </div>
-                       
+
                     <div class="field">
                         <label>Address</label>
                         <input type="text" name="address" placeholder="Address" required="">
                     </div>
                     <div class="two fields">
-                    <div class="field">
-                        <label>Contact Number</label>
-                        <input type="text" name="contactno" placeholder="Contact Number" required="">
-                    </div>
+                        <div class="field">
+                            <label>Contact Number</label>
+                            <input type="text" name="contactno" placeholder="Contact Number" required="">
+                        </div>
                         <div class="field">
                             <label>Email</label>
                             <input type="text" name="email" placeholder="Email" required="">
@@ -140,41 +142,46 @@
                 </form>
 
 
-
             </div>
 
+            <div class="right floated four wide column" style="padding-right: 50px">
 
-        <div class="right floated four wide column" style="padding-right: 50px">
 
-            <br><br><br>
+                <br><br><br>
 
-            <form class="ui form" id="f2" action="" method="POST">
-                <div class="field">
-                    <label>Username</label>
-                    <div class="ui left icon input">
-                        <input type="text" name="logUsername" placeholder="Username">
-                        <i class="user icon"></i>
+
+                <div class="ui large label" style="width: 80px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?></div>
+
+
+                <br><br><br>
+
+                <form class="ui form" id="f2" action="" method="POST">
+                    <div class="field">
+                        <label>Username</label>
+                        <div class="ui left icon input">
+                            <input type="text" name="logUsername" placeholder="Username">
+                            <i class="user icon"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label>Password</label>
-                    <div class="ui left icon input">
-                        <input type="password" name="logPassword" placeholder="Password">
-                        <i class="lock icon"></i>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="ui left icon input">
+                            <input type="password" name="logPassword" placeholder="Password">
+                            <i class="lock icon"></i>
+                        </div>
                     </div>
-                </div>
-                <button class="ui button" name="log" type="submit" value="login">Login</button>
-            </form>
-        </div>
+                    <button class="ui button" name="log" type="submit" value="login">Login</button>
+                </form>
+            </div>
 
         </div>
 
-
-        </div>
 
     </div>
 
-<div style="background-color: wheat; height: 700px;padding-left: 85px" ></div>
+</div>
+
+<div style="background-color: wheat; height: 700px;padding-left: 85px"></div>
 
 
 <div class="ui inverted vertical footer segment">
@@ -182,27 +189,30 @@
     <div class="ui center aligned container">
         <div class="ui stackable inverted divided grid">
             <div class="three wide column">
-                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html" style="font-size: 15px">Privacy Policy</a>
+                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html"
+                   style="font-size: 15px">Privacy Policy</a>
                 <div class="ui inverted link list">
 
                 </div>
             </div>
             <div class="three wide column">
-                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html" style="font-size: 15px">Delivary Policy</a>
+                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html"
+                   style="font-size: 15px">Delivary Policy</a>
                 <div class="ui inverted link list">
 
 
                 </div>
             </div>
             <div class="three wide column">
-                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html" style="font-size: 15px">Cancellation Policy</a>
+                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html"
+                   style="font-size: 15px">Cancellation Policy</a>
                 <div class="ui inverted link list">
 
 
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header" > Designed & Developed by prOmiGO Pvt.Ltd</h4>
+                <h4 class="ui inverted header"> Designed & Developed by prOmiGO Pvt.Ltd</h4>
                 <p>Copyright © 2016-2017 CreativeHandslk.com. All Rights Reserved.</p>
             </div>
         </div>
@@ -229,41 +239,34 @@
 </html>
 
 
-
-
 <?php
 
+class userData
+{
 
-session_start();
 
-class userData {
-
-    //var $userId=1;
-    static $nameLogged;
+    public static $nameLogged = "User!";
     static $url = "localhost";
     static $username = "root";
     static $password = "";
     static $db = "creativehands";
 
-    public static function connect(): mysqli {
-        $conn = new mysqli(userData::$url, userData::$username, userData::$password, userData::$db) or die("Not Connected!");
-        return $conn;
-    }
-
-    public function test_input($data) {
+    public function test_input($data)
+    {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
 
-    public function addUser() {
+    public function addUser()
+    {
 
         if (!empty($_POST['user'])) {
             switch ($_REQUEST['user']) {
 
                 case 'submit':
-                    $userId=0;
+                    $userId = 0;
                     $userName = $_POST["name"];
                     $userGender = $_POST["gender"];
                     $userAddress = $_POST["address"];
@@ -289,8 +292,7 @@ class userData {
                     break;
 
                 case 'update':
-                   // $sqlInsert = "INSERT INTO user VALUES($userId,'$userName','$userGender','$userAddress','$userEmail',$userContact,'$userLogin','$userPassword');";
-
+                    // $sqlInsert = "INSERT INTO user VALUES($userId,'$userName','$userGender','$userAddress','$userEmail',$userContact,'$userLogin','$userPassword');";
 
 
                     break;
@@ -298,7 +300,14 @@ class userData {
         }
     }
 
-    public function loginAction() {
+    public static function connect(): mysqli
+    {
+        $conn = new mysqli(userData::$url, userData::$username, userData::$password, userData::$db) or die("Not Connected!");
+        return $conn;
+    }
+
+    public function loginAction()
+    {
 
         $logUser = $_POST["logUsername"];
         $logPassword = $_POST["logPassword"];
@@ -310,10 +319,9 @@ class userData {
 
             try {
                 $conn = userData::connect();
-                $result=mysqli_query($conn, $sqlLogin);
+                $result = mysqli_query($conn, $sqlLogin);
                 if ($result) {
                     echo "Query Executed!<br>";
-                    echo "$sqlLogin";
                 }
             } catch (Exception $ex) {
                 echo "echo 'Message: ' .$ex->getMessage();";
@@ -323,8 +331,7 @@ class userData {
                 // output data of each row
                 while ($row = mysqli_fetch_assoc($result)) {
                     $nameLogged = $row["userLogin"];
-                    $_SESSION["loggedName"] = $nameLogged;
-                    echo "username is .$nameLogged";
+                    $_SESSION["Uname"] = $nameLogged;
                 }
             } else {
                 echo "<script>alert('Username/Password is incorrect!')</script>";
@@ -337,8 +344,17 @@ class userData {
 }
 
 $obj = new userData();
+
 $obj->connect();
-$obj->addUser();
-$obj->loginAction();
+if (isset($_POST['submit'])) {
+
+    $obj->addUser();
+}
+
+if (isset($_POST['log'])) {
+
+    $obj->loginAction();
+}
+
 ?>
 

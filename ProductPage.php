@@ -74,7 +74,7 @@
 
             <div class="sixteen wide column"></div>
 
-            <div class="twelve wide right floated column">
+            <div class="ten wide centered column">
 
                 <div class="ui  menu">
                     <a class="item">

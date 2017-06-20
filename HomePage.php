@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 session_start();
 ?>
 <html>
@@ -63,10 +62,7 @@ session_start();
                         <a href="Login.php"> <i class="icon user"></i>
                             Login</a>
                     </button>
-                   <?php
-                 //  $name=$_SESSION["loggedName"];
-                   ?>
-                    <div class="ui large label" style="width: 120px;height: 35px">Hi User!</div>
+                    <div class="ui large label" style="width: 120px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?>!</div>
 
                 </div>
             </div>
@@ -76,16 +72,7 @@ session_start();
 
                     <div class="ui two column centered grid">
 
-                        <div class="column">
-                            <div class="ui fluid category search">
-                                <div class="ui icon input">
-                                    <input class="prompt" type="text" placeholder="Search..." ">
 
-                                    <i class="search icon"></i>
-                                </div>
-                                <div class="results"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -96,7 +83,7 @@ session_start();
 
 
             <div class="ui grid">
-                <div class="ui four wide centered column">
+                <div class="ui two wide centered column">
                     <div class="row"></div> <br><br>
                     <div class="row"></div>
                     <h2 style="color: black; font-family: cursive;font-size:20px" >Best Sellers</h2>
@@ -113,7 +100,7 @@ session_start();
 
 
 
-                    <div class="card" style="height: 150px; width: 150px">
+                    <div class="card" style="height: 200px; width: 200px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -134,7 +121,7 @@ session_start();
 
 
 
-                    <div class="card" style="height: 150px; width: 150px">
+                    <div class="card" style="height: 200px; width: 200px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -153,7 +140,7 @@ session_start();
                         </div>
                     </div>
 
-                    <div class="card" style="height: 150px; width: 150px">
+                    <div class="card" style="height: 200px; width: 200px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
@@ -173,7 +160,7 @@ session_start();
                     </div>
 
 
-                    <div class="card" style="height: 150px; width: 150px">
+                    <div class="card" style="height: 200px; width: 200px">
                         <div class="blurring dimmable image">
                             <div class="ui dimmer">
                                 <div class="content">
