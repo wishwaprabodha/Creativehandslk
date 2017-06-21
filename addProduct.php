@@ -104,19 +104,19 @@
                         </div>
                         <div class="field">
                             <label>Catagory B</label>
-                            <input type="password" name="catB" placeholder="Catagory B" required="">
+                            <input type="text" name="catB" placeholder="Catagory B" required="">
                         </div>
                         <div class="field">
                             <label>Catagory C</label>
-                            <input type="password" name="catC" placeholder="Catagory C" required="">
+                            <input type="text" name="catC" placeholder="Catagory C" required="">
                         </div>
                     </div>
 
                     <br>
 
-                    <button class="ui button" name="user" type="submit" value="submit">Submit</button>
-                    <button class="ui button" name="user" type="submit" value="update">Update</button>
-                    <button class="ui button" name="user" type="submit" value="update">Search</button>
+                    <button class="ui button" name="product" type="submit" value="sub">Submit</button>
+                    <button class="ui button" name="product" type="submit" value="update">Update</button>
+                    <button class="ui button" name="product" type="submit" value="search">Search</button>
 
                 </form>
 
@@ -179,17 +179,17 @@
 
 
         <div class="icon">
-            <i class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></i>
-            <i class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></i>
-            <i class="github icon" href="https://github.com/wishwaprabodha"></i>
+            <a> <i class="facebook icon" href="https://www.facebook.com"></i> </a>
+            <a><i class="google plus icon" href=" https://plus.google.com"></i></a>
+            <a> <i class="github icon" href="https://github.com"></i></a>
         </div>
 
 
         <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Disclaimer</a>
+            <i class="item" href="#">Site Map</i>
+            <i class="item" href="#">Contact Us</i>
+            <i class="item" href="#">Terms and Conditions</i>
+            <i class="item" href="#">Disclaimer</i>
         </div>
     </div>
 
@@ -197,17 +197,99 @@
 </body>
 </html>
 
-
-
-
-
-
-
 <?php
-/**
- * Created by PhpStorm.
- * User: Wishwa Prabodha
- * Date: 15/06/2017
- * Time: 09:12
- */
+
+class productData
+{
+
+    static $url = "localhost";
+    static $username = "root";
+    static $password = "";
+    static $db = "creativehands";
+
+    public function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    public function addProduct()
+    {
+            switch ($_REQUEST['product']) {
+
+                case 'sub':
+
+                    $productName = $_POST["pname"];
+                    $productPrice = $_POST["price"];
+                    $productcatA = $_POST["catA"];
+                    $productcatB = $_POST["catB"];
+                    $productcatC = $_POST["catC"];
+
+
+
+                        $sqlInsert = "INSERT INTO product(productName,productPrice,catagoryA,catagoryB,catagoryC) VALUES('$productName',$productPrice,'$productcatA','$productcatB','$productcatC');";
+
+
+
+                    try {
+                        $conn = productData::connect();
+                        $result=mysqli_query($conn, $sqlInsert);
+                        if ($result) {
+                            echo "Query Executed!<br>";
+                        }
+                    } catch (Exception $ex) {
+                        echo "echo 'Message: ' .$ex->getMessage();";
+                    }
+
+
+                        if ($result) {
+                            echo "<script>alert('Product Added!')</script>";
+                        }
+                    break;
+
+                case 'update':
+
+                    /* Not implemented
+                         *   Can be implemented by using product id,db values can set to input fields. And by altering them User details can be updated
+                    */
+
+                    break;
+            }
+
+    }
+
+    public static function connect(): mysqli
+    {
+        $conn = new mysqli(productData::$url, productData::$username, productData::$password, productData::$db) or die("Not Connected!");
+        return $conn;
+    }
+
+
+}
+
+$obj = new productData();
+
+$obj->connect();
+
+
+        if (isset($_POST['product'])) {
+
+            switch ($_REQUEST['product']) {
+
+                case 'sub':
+
+                    $obj->addProduct();
+
+                    break;
+            }
+
+}
+
+?>
+
+
+
+
 

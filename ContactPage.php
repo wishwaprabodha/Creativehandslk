@@ -107,17 +107,17 @@
 
 
         <div class="icon">
-            <i class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></i>
-            <i class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></i>
-            <i class="github icon" href="https://github.com/wishwaprabodha"></i>
+            <a> <i class="facebook icon" href="https://www.facebook.com"></i> </a>
+            <a><i class="google plus icon" href=" https://plus.google.com"></i></a>
+            <a> <i class="github icon" href="https://github.com"></i></a>
         </div>
 
 
         <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Disclaimer</a>
+            <i class="item" href="#">Site Map</i>
+            <i class="item" href="#">Contact Us</i>
+            <i class="item" href="#">Terms and Conditions</i>
+            <i class="item" href="#">Disclaimer</i>
         </div>
     </div>
 
@@ -129,12 +129,3 @@
 
 
 
-
-
-<?php
-/**
- * Created by PhpStorm.
- * User: Wishwa Prabodha
- * Date: 15/06/2017
- * Time: 09:12
- */

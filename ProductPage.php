@@ -66,6 +66,7 @@
 
 
     <div style="background-image: url('./img/back2.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 400px">
+
         <div class="ui  grid">
 
             <div class="row">
@@ -75,6 +76,8 @@
             <div class="sixteen wide column"></div>
 
             <div class="ten wide centered column">
+
+                <form action="" name="newF" method="post">
 
                 <div class="ui  menu">
                     <a class="item">
@@ -139,10 +142,15 @@
                     </a>
                 </div>
 
+                </form>
+
                 </div>
         </div>
 
 
+        <?php
+
+        ?>
 
         <div class="sixteen column centered ui grid">
            <?php for ($i=0;$i<3;$i++){
@@ -281,9 +289,9 @@
 
 
         <div class="icon">
-            <i class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></i>
-            <i class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></i>
-            <i class="github icon" href="https://github.com/wishwaprabodha"></i>
+            <a> <i class="facebook icon" href="https://www.facebook.com"></i> </a>
+            <a><i class="google plus icon" href=" https://plus.google.com"></i></a>
+            <a> <i class="github icon" href="https://github.com"></i></a>
         </div>
 
 

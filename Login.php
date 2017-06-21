@@ -55,7 +55,7 @@
                     </a>
 
 
-                    <a class="item" href="addProduct.php">
+                    <a class="item" <?php if($_SESSION['Uaccess']==1){ echo 'href="addProduct.php"';} ?>>
                         Add Products
                     </a>
                 </div>
@@ -136,7 +136,7 @@
                         </div>
                     </div>
 
-                    <button class="ui button" name="user" type="submit" value="submit">Submit</button>
+                    <button class="ui button" name="user" type="submit" value="sub">Submit</button>
                     <button class="ui button" name="user" type="submit" value="update">Update</button>
 
                 </form>
@@ -150,7 +150,7 @@
                 <br><br><br>
 
 
-                <div class="ui large label" style="width: 80px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?>!</div>
+                <div class="ui large label" style="width: 100px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?>!</div>
 
 
                 <br><br><br>
@@ -171,6 +171,7 @@
                         </div>
                     </div>
                     <button class="ui button" name="log" type="submit" value="login">Login</button>
+                    <button class="ui button" name="logout" type="submit" value="logout">Logout</button>
                 </form>
             </div>
 
@@ -219,17 +220,17 @@
         <div class="ui inverted section divider"></div>
 
         <div class="icon">
-            <i class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></i>
-            <i class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></i>
-            <i class="github icon" href="https://github.com/wishwaprabodha"></i>
+            <a> <i class="facebook icon" href="https://www.facebook.com"></i> </a>
+            <a><i class="google plus icon" href=" https://plus.google.com"></i></a>
+            <a> <i class="github icon" href="https://github.com"></i></a>
         </div>
 
 
         <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Disclaimer</a>
+            <i class="item" href="#">Site Map</i>
+            <i class="item" href="#">Contact Us</i>
+            <i class="item" href="#">Terms and Conditions</i>
+            <i class="item" href="#">Disclaimer</i>
         </div>
     </div>
 </div>
@@ -265,7 +266,7 @@ class userData
         if (!empty($_POST['user'])) {
             switch ($_REQUEST['user']) {
 
-                case 'submit':
+                case 'sub':
                     $userId = 0;
                     $userName = $_POST["name"];
                     $userGender = $_POST["gender"];
@@ -280,20 +281,22 @@ class userData
                         echo "<script>alert('Password does not match!')</script>";
                     } elseif ($_POST["terms"] == 0) {
                         echo "<script>alert('Accept Terms and Conditions to Continue!')</script>";
-                    } else {
+                    }
+                     else {
 
                         $sqlInsert = "INSERT INTO user(userName,userGender,userAddress,userEmail,userContact,userLogin,userPassword) VALUES('$userName','$userGender','$userAddress','$userEmail',$userContact,'$userLogin','$userPassword');";
                         $conn = userData::connect();
                         if (mysqli_query($conn, $sqlInsert)) {
-                            echo "Query Executed!<br>";
-                            echo "$sqlInsert";
+                            echo "<script>alert('User Added!')</script>";
                         }
                     }
                     break;
 
                 case 'update':
-                    // $sqlInsert = "INSERT INTO user VALUES($userId,'$userName','$userGender','$userAddress','$userEmail',$userContact,'$userLogin','$userPassword');";
 
+                    /* Not implemented
+                         *   Can be implemented by using user login id,db values can set to input fields. And by altering them User details can be updated
+                    */
 
                     break;
             }
@@ -306,17 +309,18 @@ class userData
         return $conn;
     }
 
-    public function loginAction()
-    {
+    public function logout(){
+        $_SESSION['Uname']="User";
+        $_SESSION['Uid']=0;
+        $_SESSION['Uaccess']=0;
 
+    }
+
+    public function loginAction(){
         $logUser = $_POST["logUsername"];
         $logPassword = $_POST["logPassword"];
-
-
         if (!empty($_POST['log'])) {
-            //echo "gdfgdgdgdfgd";
             $sqlLogin = "SELECT * FROM user WHERE userLogin='$logUser' AND userPassword='$logPassword';";
-
             try {
                 $conn = userData::connect();
                 $result = mysqli_query($conn, $sqlLogin);
@@ -326,7 +330,6 @@ class userData
             } catch (Exception $ex) {
                 echo "echo 'Message: ' .$ex->getMessage();";
             }
-
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -338,7 +341,6 @@ class userData
             } else {
                 echo "<script>alert('Username/Password is incorrect!')</script>";
             }
-
             mysqli_close($conn);
         }
     }
@@ -348,7 +350,8 @@ class userData
 $obj = new userData();
 
 $obj->connect();
-if (isset($_POST['submit'])) {
+
+if (isset($_POST['user'])) {
 
     $obj->addUser();
 }
@@ -356,6 +359,11 @@ if (isset($_POST['submit'])) {
 if (isset($_POST['log'])) {
 
     $obj->loginAction();
+}
+
+if (isset($_POST['logout'])) {
+
+    $obj->logout();
 }
 
 ?>

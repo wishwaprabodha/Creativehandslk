@@ -62,7 +62,8 @@ session_start();
                         <a href="Login.php"> <i class="icon user"></i>
                             Login</a>
                     </button>
-                    <div class="ui large label" style="width: 120px;height: 35px">Hi <?php echo $_SESSION['Uaccess'] ?> !</div>
+                    <div class="ui large label" style="width: 120px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?> !</div>
+                    <div class="row"></div>
 
                 </div>
             </div>
@@ -219,17 +220,17 @@ session_start();
         <div class="ui inverted section divider"></div>
 
         <div class="icon">
-            <a class="facebook icon" href="https://www.facebook.com/wishwa.prabodha"></a>
-            <a class="google plus icon" href=" https://plus.google.com/u/0/109869121768945903903"></a>
-            <a class="github icon" href="https://github.com/wishwaprabodha"></a>
+            <a> <i class="facebook icon" href="https://www.facebook.com"></i> </a>
+            <a><i class="google plus icon" href=" https://plus.google.com"></i></a>
+            <a> <i class="github icon" href="https://github.com"></i></a>
         </div>
 
 
         <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Disclaimer</a>
+            <i class="item" href="#">Site Map</i>
+            <i class="item" href="#">Contact Us</i>
+            <i class="item" href="#">Terms and Conditions</i>
+            <i class="item" href="#">Disclaimer</i>
         </div>
     </div>
 </div>
@@ -237,10 +238,3 @@ session_start();
 </html>
 
 
-<?php
-/**
- * Created by PhpStorm.
- * User: Wishwa Prabodha
- * Date: 10/05/2017
- * Time: 13:01
- */
