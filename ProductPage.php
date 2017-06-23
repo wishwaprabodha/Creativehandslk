@@ -1,5 +1,10 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["Uname"])){
+        $_SESSION["Uname"]='User';
+    }
+?>
 <html>
-
 <head>
     <title>productPage</title>
 
@@ -9,62 +14,48 @@
 
     <script>
         $(document).ready(function () {
-
-            $('.dropdown')
-                .dropdown({
-                    // you can use any ui transition
-                    transition: 'drop'
-                })
-            ;
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-
-            $('.dropdown')
-                .dropdown({
-                    // you can use any ui transition
-                    transition: 'drop'
-                });
-
-            $('.special.cards .image').dimmer({
-                on: 'hover'
+            $('.dropdown').dropdown({
+                transition: 'drop'
             });
-
         });
     </script>
+
+    <style>
+        body{
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main{
+            flex: 1;
+        }
+    </style>
 
 </head>
 <body>
+<header>
+    <div class="ui grid">
+        <div class="sixteen wide column">
+            <div class="ui inverted secondary pointing fixed menu">
+                <h3 class="item" style="color: black;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
+                <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
+                    <a class="item" href="HomePage.php">
+                        Home
+                    </a>
+                    <a class="active item" >
+                        Products
+                    </a>
 
-<div class="ui grid">
+                    <a class="item" href="ContactPage.php">
+                        Contact
+                    </a>
 
-    <div class="sixteen wide column">
-
-
-    <div class="ui inverted secondary pointing fixed menu">
-    <h3 class="item" style="color: black;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
-    <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
-        <a class="item" href="HomePage.php">
-            Home
-        </a>
-        <a class="active item" >
-            Products
-        </a>
-
-        <a class="item" href="ContactPage.php">
-            Contact
-        </a>
-
-  </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
-
-
-
-
+</header>
+<main>
     <div style="background-image: url('./img/back2.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 400px">
 
         <div class="ui  grid">
@@ -77,10 +68,8 @@
 
             <div class="ten wide centered column">
 
-                <form action="" name="newF" method="post">
-
-                <div class="ui  menu">
-                    <a class="item">
+                <div class="ui menu" id="selectionMenu">
+                    <a class="item myClass">
                         Cards
                     </a>
                     <div class="ui pointing dropdown link item">
@@ -89,172 +78,82 @@
                         <div class="menu">
                             <div class="item">
                                 <i class="dropdown icon"></i>
-                                <span class="text">Family</span>
+                                <span class="text" >Family</span>
                                 <div class="menu">
-                                    <div class="item">For Father</div>
-                                    <div class="item">For Mother</div>
-                                    <div class="item">For Sister</div>
-                                    <div class="item">For Brother</div>
-                                    <div class="item">For Grandma</div>
-                                    <div class="item">For Grandpa</div>
-                                    <div class="item">For Son</div>
-                                    <div class="item">For Daughter</div>
-                                    <div class="item">For Uncle</div>
+                                    <div class="item myClass">For Father</div>
+                                    <div class="item myClass">For Mother</div>
+                                    <div class="item myClass">For Sister</div>
+                                    <div class="item myClass">For Brother</div>
+                                    <div class="item myClass">For Grandma</div>
+                                    <div class="item myClass">For Grandpa</div>
+                                    <div class="item myClass">For Son</div>
+                                    <div class="item myClass">For Daughter</div>
+                                    <div class="item myClass">For Uncle</div>
                                 </div>
                             </div>
-                            <div class="item">For Him</div>
-                            <div class="item">For Her</div>
-                            <div class="item">For Friend</div>
-                            <div class="item">For Teacher</div>
+                            <div class="item myClass">For Him</div>
+                            <div class="item myClass">For Her</div>
+                            <div class="item myClass">For Friend</div>
+                            <div class="item myClass">For Teacher</div>
                         </div>
                     </div>
                     <div class="ui pointing dropdown link item">
                         <span class="text">Personalized Items</span>
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <div class="item">Clock</div>
-                            <div class="item">Pillow</div>
-                            <div class="item">Photo Frames</div>
-                            <div class="item">Wall Decorations</div>
-                            <div class="item">Plates</div>
-                            <div class="item">Mugs</div>
-                            <div class="item">T-Shirt</div>
+                            <div class="item myClass">Clock</div>
+                            <div class="item myClass">Pillow</div>
+                            <div class="item myClass">Photo Frames</div>
+                            <div class="item myClass">Wall Decorations</div>
+                            <div class="item myClass">Plates</div>
+                            <div class="item myClass">Mugs</div>
+                            <div class="item myClass">T-Shirt</div>
                         </div>
                     </div>
-                    
-                    <a class="item">
+
+                    <a class="item myClass">
                         Toys
                     </a>
-                    <a class="item">
+                    <a class="item myClass">
                         Chocolate
                     </a>
-                    <a class="item">
+                    <a class="item myClass">
                         Jewellary
                     </a>
-                    <a class="item">
+                    <a class="item myClass">
                         Fancy Items
                     </a>
-                    <a class="item">
-                       Flowers
+                    <a class="item myClass">
+                        Flowers
                     </a>
-                    <a class="item">
+                    <a class="item myClass">
                         Cake
                     </a>
                 </div>
 
-                </form>
 
-                </div>
-        </div>
+                <script>
+                    $(document).ready(function () {
+                        $("#selectionMenu .myClass").click(function () {
+                            loadItems(this.innerText);
+                        });
+                    });
+                    var loadItems = function(itemName){
+                        $.post('./loadData.php', {"type": itemName}, function(response) {
+                            // Log the response to the console
+                            $('#loadHere').html(response);
+                        });
+                    };
+                </script>
 
-
-        <?php
-
-        ?>
-
-        <div class="sixteen column centered ui grid">
-           <?php for ($i=0;$i<3;$i++){
-            echo ' <div class="row"></div>
-                
-                
-      
-
-                <div class="ui special cards">
-
-
-
-                    <div class="card" style="height: 200px; width: 200px">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                                <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">For Him</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="./img/house.PNG" >
-                        </div>
-                        <div class="content">
-                            <a class="header">Clay House</a>
-                            <div class="meta">
-                                <span class="date">Rs.300</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="card" style="height: 200px; width: 200px">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                                <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">Decor</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="./img/table.png">
-                        </div>
-                        <div class="content">
-                            <a class="header">Table decor </a>
-                            <div class="meta">
-                                <span class="date">Rs.150</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card" style="height: 200px; width: 200px">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                                <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">Crafts</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="./img/basket.png">
-                        </div>
-                        <div class="content">
-                            <a class="header">Paper Basket </a>
-                            <div class="meta">
-                                <span class="date">Rs.250</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="card" style="height: 200px; width: 200px">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                                <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">For Her</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="./img/wall.PNG" >
-                        </div>
-                        <div class="content">
-                            <a class="header">Wall Decor</a>
-                            <div class="meta">
-                                <span class="date">Rs.200</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-           
-          ';}?>
+            </div>
         </div>
     </div>
 
-
-    <div style="background-color: #e57373; height: 700px;padding-left: 85px" >
-        </div>
-
-
+    <div style="padding-left: 85px" >
+        <div id="loadHere" style="padding-top: 50px; padding-bottom: 50px;"></div>
+    </div>
+</main>
 
 <div class="ui inverted vertical footer segment">
     <br>

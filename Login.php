@@ -1,5 +1,13 @@
 <?php
     session_start();
+if (!isset($_SESSION["Uname"])){
+    $_SESSION["Uname"]='User';
+}
+
+if (!isset($_SESSION["Uaccess"])){
+    $_SESSION["Uaccess"]=0;
+}
+
 ?>
 
 <html>
@@ -150,7 +158,7 @@
                 <br><br><br>
 
 
-                <div class="ui large label" style="width: 100px;height: 35px">Hi <?php echo $_SESSION['Uname'] ?>!</div>
+                <div class="ui large label" style="width: 100px;height: 35px">Hi <?php echo $_SESSION['Uname']; ?>!</div>
 
 
                 <br><br><br>
