@@ -109,7 +109,7 @@ if (!isset($_SESSION["Uname"])){
                             <div class="ui dimmer">
                                 <div class="content">
                                     <div class="center">
-                                        <div class="ui inverted button">For Him</div>
+                                        <div class="ui inverted button">Rs.300</div>
                                     </div>
                                 </div>
                             </div>
@@ -117,9 +117,7 @@ if (!isset($_SESSION["Uname"])){
                         </div>
                         <div class="content">
                             <a class="header">Clay House</a>
-                            <div class="meta">
-                                <span class="date">Rs.300</span>
-                            </div>
+
                         </div>
                     </div>
 
@@ -130,7 +128,7 @@ if (!isset($_SESSION["Uname"])){
                             <div class="ui dimmer">
                                 <div class="content">
                                     <div class="center">
-                                        <div class="ui inverted button">Decor</div>
+                                        <div class="ui inverted button">Rs.150</div>
                                     </div>
                                 </div>
                             </div>
@@ -138,9 +136,6 @@ if (!isset($_SESSION["Uname"])){
                         </div>
                         <div class="content">
                             <a class="header">Table decor </a>
-                            <div class="meta">
-                                <span class="date">Rs.150</span>
-                            </div>
                         </div>
                     </div>
 
@@ -149,7 +144,7 @@ if (!isset($_SESSION["Uname"])){
                             <div class="ui dimmer">
                                 <div class="content">
                                     <div class="center">
-                                        <div class="ui inverted button">Crafts</div>
+                                        <div class="ui inverted button">Rs.250</div>
                                     </div>
                                 </div>
                             </div>
@@ -157,9 +152,6 @@ if (!isset($_SESSION["Uname"])){
                         </div>
                         <div class="content">
                             <a class="header">Paper Basket </a>
-                            <div class="meta">
-                                <span class="date">Rs.250</span>
-                            </div>
                         </div>
                     </div>
 
@@ -169,7 +161,7 @@ if (!isset($_SESSION["Uname"])){
                             <div class="ui dimmer">
                                 <div class="content">
                                     <div class="center">
-                                        <div class="ui inverted button">For Her</div>
+                                        <div class="ui inverted button">Rs.200</div>
                                     </div>
                                 </div>
                             </div>
@@ -177,9 +169,6 @@ if (!isset($_SESSION["Uname"])){
                         </div>
                         <div class="content">
                             <a class="header">Wall Decor</a>
-                            <div class="meta">
-                                <span class="date">Rs.200</span>
-                            </div>
                         </div>
                     </div>
 

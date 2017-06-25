@@ -207,13 +207,6 @@ class productData
     static $password = "";
     static $db = "creativehands";
 
-    public function test_input($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
 
     public function addProduct()
     {

@@ -1,8 +1,20 @@
 <?php
-    session_start();
-    if (!isset($_SESSION["Uname"])){
-        $_SESSION["Uname"]='User';
-    }
+session_start();
+if (!isset($_SESSION["Uname"])) {
+    $_SESSION["Uname"] = 'User';
+}
+
+if (!isset($_SESSION['productId'])) {
+    $_SESSION['productId'] = null;
+}
+
+if (!isset($_SESSION['productName'])) {
+    $_SESSION['productName'] = null;
+}
+
+if (!isset($_SESSION['productPrice'])) {
+    $_SESSION['productPrice'] = null;
+}
 ?>
 <html>
 <head>
@@ -21,12 +33,13 @@
     </script>
 
     <style>
-        body{
+        body {
             display: flex;
             min-height: 100vh;
             flex-direction: column;
         }
-        main{
+
+        main {
             flex: 1;
         }
     </style>
@@ -37,12 +50,12 @@
     <div class="ui grid">
         <div class="sixteen wide column">
             <div class="ui inverted secondary pointing fixed menu">
-                <h3 class="item" style="color: black;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
+                <h3 class="item" style="color: black;font-family: cursive;font-style: inherit">CreativeHandslk</h3>
                 <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
                     <a class="item" href="HomePage.php">
                         Home
                     </a>
-                    <a class="active item" >
+                    <a class="active item">
                         Products
                     </a>
 
@@ -78,7 +91,7 @@
                         <div class="menu">
                             <div class="item">
                                 <i class="dropdown icon"></i>
-                                <span class="text" >Family</span>
+                                <span class="text">Family</span>
                                 <div class="menu">
                                     <div class="item myClass">For Father</div>
                                     <div class="item myClass">For Mother</div>
@@ -138,8 +151,8 @@
                             loadItems(this.innerText);
                         });
                     });
-                    var loadItems = function(itemName){
-                        $.post('./loadData.php', {"type": itemName}, function(response) {
+                    var loadItems = function (itemName) {
+                        $.post('./loadData.php', {"type": itemName}, function (response) {
                             // Log the response to the console
                             $('#loadHere').html(response);
                         });
@@ -150,7 +163,7 @@
         </div>
     </div>
 
-    <div style="padding-left: 85px" >
+    <div style="padding-left: 85px">
         <div id="loadHere" style="padding-top: 50px; padding-bottom: 50px;"></div>
     </div>
 </main>
@@ -160,27 +173,30 @@
     <div class="ui center aligned container">
         <div class="ui stackable inverted divided grid">
             <div class="three wide column">
-                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html" style="font-size: 15px">Privacy Policy</a>
+                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html"
+                   style="font-size: 15px">Privacy Policy</a>
                 <div class="ui inverted link list">
 
                 </div>
             </div>
             <div class="three wide column">
-                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html" style="font-size: 15px">Delivary Policy</a>
+                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html"
+                   style="font-size: 15px">Delivary Policy</a>
                 <div class="ui inverted link list">
 
 
                 </div>
             </div>
             <div class="three wide column">
-                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html" style="font-size: 15px">Cancellation Policy</a>
+                <a class="ui inverted header" href="https://semantic-ui.com/elements/image.html"
+                   style="font-size: 15px">Cancellation Policy</a>
                 <div class="ui inverted link list">
 
 
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header" > Designed & Developed by prOmiGO Pvt.Ltd</h4>
+                <h4 class="ui inverted header"> Designed & Developed by prOmiGO Pvt.Ltd</h4>
                 <p>Copyright © 2016-2017 CreativeHandslk.com. All Rights Reserved.</p>
             </div>
         </div>
