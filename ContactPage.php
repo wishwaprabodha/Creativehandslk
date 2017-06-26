@@ -23,7 +23,7 @@
 
 
 </head>
-<body>
+<body style="background-image: url('./img/conP.PNG');  background-repeat: no-repeat; background-size: auto 100%; background-attachment: fixed">
 
 <div class="ui grid">
 
@@ -52,24 +52,15 @@
 
 
 
-<div style="background-image: url('./img/conP.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 400px">
-
+<div style="background-color:rgba(0,0,0, 0.25); height: 700px;width: 100%;padding-top: 10%" >
     <br>
     <br>
     <br>
 
-   <h4 style="color: #A291FB">Who are We?</h4><br>
-    <p style="color: yellow;font-family: inherit;font-style: oblique">This Website is created for clients to purchase handcrafts which are made by CreativeHandslk team. You can choose the products that we have
-    displayed in our webstore. If you want to customized product, please send us the specification to creativehandlk@gmail.com. </p>
-        </div>
+    <h4 style="color: #A291FB;padding-left: 10%">Who are We?</h4><br>
+    <p style="color: yellow;font-family: inherit;font-style: oblique;padding-left: 10%;padding-right: 10%">This Website is created for clients to purchase handcrafts which are made by CreativeHandslk team. You can choose the products that we have
+        displayed in our webstore. If you want to customized product, please send us the specification to creativehandlk@gmail.com. </p>
 
-
-    </div>
-
-</div>
-
-
-<div style="background-color: #A3C293; height: 700px;padding-left: 85px" >
 </div>
 
 
