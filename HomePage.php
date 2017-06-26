@@ -31,11 +31,11 @@ if (!isset($_SESSION["Uname"])){
 
 
     </head>
-    <body>
+    <body style="background-image: url('./img/cr.PNG');  background-repeat: no-repeat; height: 100%; background-size: auto 100%; background-attachment: fixed">
         <div class="ui grid">
             <div class="sixteen wide column">
                 <div class="ui inverted secondary pointing fixed menu" >
-                    <h3 class="item" style="color: wheat;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
+                    <h3 class="item" style="color: white;font-family: cursive;font-style: inherit" >CreativeHandslk</h3>
                     <div class="right menu" style="padding-bottom: 10px;font-family:inherit">
                         <a class="active item">
                             Home
@@ -55,24 +55,22 @@ if (!isset($_SESSION["Uname"])){
 
 
 
-        <div style="background-image: url('./img/cr.PNG');  background-repeat: no-repeat; height: 400px">
-            <div class="ui four column grid">
-                <div class="row">
-                    <br>  <br>
-                </div>
-                <div class="right floated center aligned column" style="padding-right: 40px">
-                    <button class="ui icon button">
-                        <a href="Login.php"> <i class="icon user"></i>
-                            Login</a>
-                    </button>
-                    <div class="ui large label" style="width: 120px;height: 35px">Hi <?php echo $_SESSION['Uname']; ?> !</div>
-                    <div class="row"></div>
-
+        <div style="height: 80vh">
+            <div style="position: fixed; top: 10%; left: 85%; width: 15%">
+                <div class="ui two column centered grid">
+                    <div class="column">
+                        <button class="ui icon button">
+                            <a href="Login.php"> <i class="icon user"></i>Login</a>
+                        </button>
+                    </div>
+                    <div class="right floated column">
+                        <div class="ui large label" style="height: 35px">Hi <?php echo $_SESSION['Uname']; ?> !</div>
+                    </div>
                 </div>
             </div>
             <div class="ui two column centered grid">
                 <div class="column">
-                    <h1 style="padding-top: 100px; color: whitesmoke ; font-size: 60px; font-family: 'Vladimir Script'">Sometimes Elegance Means Simple</h1>
+                    <h1 style="color: whitesmoke ; font-size: 60px; font-family: 'Vladimir Script'; position: fixed; top: 40%">Sometimes Elegance Means Simple</h1>
 
                     <div class="ui two column centered grid">
 
@@ -83,14 +81,14 @@ if (!isset($_SESSION["Uname"])){
             </div>
         </div>
 
-        <div style="background-color: wheat; height: 700px;padding-left: 85px" >
+        <div style="background-color:  rgba(255,255,255, 0.25); height: 900px;padding-left: 85px" >
 
 
             <div class="ui grid">
                 <div class="ui two wide centered column">
                     <div class="row"></div> <br><br>
                     <div class="row"></div>
-                    <h2 style="color: black; font-family: cursive;font-size:20px" >Best Sellers</h2>
+                    <h2 style="color: white; font-family: cursive;font-size:20px" >Best Sellers</h2>
                     <br>
                 </div>
 

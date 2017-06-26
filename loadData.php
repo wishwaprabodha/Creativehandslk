@@ -43,7 +43,7 @@ class loadData{
                 $conn = loadData::connect();
                 $result = mysqli_query($conn, $sqlCards);
                 if ($result) {
-                    echo "<script> alert('Results Found');</script>";
+                    echo "<script> alert('Results Found!');</script>";
                 }
             } catch (Exception $ex) {
                 echo "echo 'Message: ' .$ex->getMessage();";
@@ -58,6 +58,7 @@ class loadData{
 
                         $html = $html . '
                     <div class="column">
+                    
                     <div class="ui special cards">
                         <div class="card" style="height: 200px; width: 200px">
                         <div class="blurring dimmable image">

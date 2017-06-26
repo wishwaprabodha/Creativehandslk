@@ -40,7 +40,7 @@
 
 
 </head>
-<body>
+<body style="background-image: url('./img/contact.PNG');  background-repeat: no-repeat;height: 100%; width: 100%; background-attachment: fixed;background-size: auto">
 
 <div class="ui grid">
 
@@ -72,9 +72,6 @@
 
 
 
-
-<div style="background-image: url('./img/contact.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 800px">
-
     <div class="ui grid">
 
 
@@ -84,7 +81,7 @@
             <div class="column">
                 <br><br><br>
 
-                <form class="ui form" id="f1" action="" method="POST" style="padding-left: 20px;padding-right: 140px">
+                <form class="ui form" id="f1" action="" method="POST" style="padding-left: 20px;padding-right: 140px;padding-top: 100px;padding-left: 50px">
 
                     <div class="two fields">
                         <div class="field">
@@ -136,12 +133,12 @@
 
 
 
-</div>
 
 
 
 
-<div style="background-color: #0e8c8c; height: 400px;padding-left: 85px" >
+
+<div style="background-color:  rgba(255,255,255, 0.25); height: 500px;padding-left: 85px" >
 </div>
 
 

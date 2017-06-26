@@ -45,7 +45,7 @@ if (!isset($_SESSION['productPrice'])) {
     </style>
 
 </head>
-<body>
+<body style="background-image: url('./img/back2.PNG');  background-repeat: no-repeat; height: 100%; width: 100%; background-size: auto 100%;background-attachment: fixed">
 <header>
     <div class="ui grid">
         <div class="sixteen wide column">
@@ -69,7 +69,7 @@ if (!isset($_SESSION['productPrice'])) {
     </div>
 </header>
 <main>
-    <div style="background-image: url('./img/back2.PNG');  background-repeat: no-repeat;padding-left: 105px; height: 400px">
+    <div style="height: 300px">
 
         <div class="ui  grid">
 
@@ -163,7 +163,7 @@ if (!isset($_SESSION['productPrice'])) {
         </div>
     </div>
 
-    <div style="padding-left: 85px">
+    <div style="padding-left: 85px; background-color: rgba(255,255,255, 0.25)">
         <div id="loadHere" style="padding-top: 50px; padding-bottom: 50px;"></div>
     </div>
 </main>

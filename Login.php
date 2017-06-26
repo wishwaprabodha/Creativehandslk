@@ -43,7 +43,7 @@ if (!isset($_SESSION["Uaccess"])){
 </head>
 <body>
 
-<div style="background-image: url('./img/logSc.PNG');  background-repeat: no-repeat; height: 400px">
+<div style="background-image: url('./img/logSc.PNG');  background-repeat: no-repeat; height: 100%; background-size: auto 100%;background-attachment: fixed">
 
     <div class="ui grid">
 
@@ -74,65 +74,65 @@ if (!isset($_SESSION["Uaccess"])){
 
     <div class="ui grid">
 
-        <div class="ui vertical divider" style="background-position:center">
+        <div class="ui vertical divider">
             Or
         </div>
 
         <div class="two column row">
 
-            <div class="left floated column">
+            <div class="left floated column" style="padding-right: 100px">
                 <br><br><br>
 
                 <form class="ui form" id="f1" action="" method="POST" style="padding-left: 40px">
 
 
                     <div class="field">
-                        <label>First Name</label>
+                        <label style="color: white">First Name</label>
                         <input type="text" name="name" placeholder="Name" required="">
                     </div>
 
                     <div class="field">
-                        <label>Address</label>
+                        <label style="color: white">Address</label>
                         <input type="text" name="address" placeholder="Address" required="">
                     </div>
                     <div class="two fields">
                         <div class="field">
-                            <label>Contact Number</label>
+                            <label style="color: white">Contact Number</label>
                             <input type="text" name="contactno" placeholder="Contact Number" required="">
                         </div>
                         <div class="field">
-                            <label>Email</label>
+                            <label style="color: white">Email</label>
                             <input type="text" name="email" placeholder="Email" required="">
                         </div>
                     </div>
 
                     <div class="three fields">
                         <div class="field">
-                            <label>Username</label>
+                            <label style="color: white">Username</label>
                             <input type="text" name="username" placeholder="Username" required="">
                         </div>
                         <div class="field">
-                            <label>Password</label>
+                            <label style="color: white">Password</label>
                             <input type="password" name="password" placeholder="Password" required="">
                         </div>
                         <div class="field">
-                            <label>Confirm Password</label>
+                            <label style="color: white">Confirm Password</label>
                             <input type="password" name="password2" placeholder="Confirm Password" required="">
                         </div>
                     </div>
 
                     <div class="inline fields">
-                        <label for="gender">Gender:</label>
+                        <label for="gender" style="color: white">Gender:</label>
                         <div class="field">
                             <div class="ui radio checkbox">
                                 <input type="radio" name="gender" value="Male" checked="" tabindex="0" class="hidden">
-                                <label>Male</label>
+                                <label style="color: white">Male</label>
                             </div>
                         </div>
                         <div class="field">
                             <div class="ui radio checkbox">
                                 <input type="radio" name="gender" value="Female" tabindex="0" class="hidden">
-                                <label>Female</label>
+                                <label style="color: white">Female</label>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ if (!isset($_SESSION["Uaccess"])){
                     <div class="field">
                         <div class="ui checkbox">
                             <input type="checkbox" name="terms" value="1" tabindex="0" class="hidden">
-                            <label>I agree to the Terms and Conditions</label>
+                            <label style="color: white">I agree to the Terms and Conditions</label>
                         </div>
                     </div>
 
@@ -165,14 +165,14 @@ if (!isset($_SESSION["Uaccess"])){
 
                 <form class="ui form" id="f2" action="" method="POST">
                     <div class="field">
-                        <label>Username</label>
+                        <label style="color: white">Username</label>
                         <div class="ui left icon input">
                             <input type="text" name="logUsername" placeholder="Username">
                             <i class="user icon"></i>
                         </div>
                     </div>
                     <div class="field">
-                        <label>Password</label>
+                        <label style="color: white">Password</label>
                         <div class="ui left icon input">
                             <input type="password" name="logPassword" placeholder="Password">
                             <i class="lock icon"></i>
@@ -190,7 +190,7 @@ if (!isset($_SESSION["Uaccess"])){
 
 </div>
 
-<div style="background-color: wheat; height: 700px;padding-left: 85px"></div>
+
 
 
 <div class="ui inverted vertical footer segment">
