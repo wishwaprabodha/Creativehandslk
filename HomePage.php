@@ -111,7 +111,7 @@ if (!isset($_SESSION["Uname"])){
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/house.PNG" >
+                            <img src="./img/1.PNG" >
                         </div>
                         <div class="content">
                             <a class="header">Clay House</a>
@@ -130,7 +130,7 @@ if (!isset($_SESSION["Uname"])){
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/table.png">
+                            <img src="./img/3.png">
                         </div>
                         <div class="content">
                             <a class="header">Table decor </a>
