@@ -69,7 +69,7 @@ if (!isset($_SESSION["Uname"])){
                 </div>
             </div>
             <div class="ui two column centered grid">
-                <div class="one wide column">
+                <div class="column">
                     <h1 style="color: whitesmoke ; font-size: 60px; font-family: 'Vladimir Script'; position: fixed; top: 40%">Sometimes Elegance Means Simple</h1>
                 </div>
 
