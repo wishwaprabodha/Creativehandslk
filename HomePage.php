@@ -31,7 +31,7 @@ if (!isset($_SESSION["Uname"])){
 
 
     </head>
-    <body style="background-image: url('./img/cr.PNG');  background-repeat: no-repeat; height: 100%; background-size: auto 100%; background-attachment: fixed">
+    <body style="background-image: url('./img/cr.jpg');  background-repeat: no-repeat; height: 100%; background-size: auto 100%; background-attachment: fixed">
         <div class="ui grid">
             <div class="sixteen wide column">
                 <div class="ui inverted secondary pointing fixed menu" >
@@ -69,13 +69,8 @@ if (!isset($_SESSION["Uname"])){
                 </div>
             </div>
             <div class="ui two column centered grid">
-                <div class="column">
+                <div class="one wide column">
                     <h1 style="color: whitesmoke ; font-size: 60px; font-family: 'Vladimir Script'; position: fixed; top: 40%">Sometimes Elegance Means Simple</h1>
-
-                    <div class="ui two column centered grid">
-
-
-                    </div>
                 </div>
 
             </div>
@@ -111,7 +106,7 @@ if (!isset($_SESSION["Uname"])){
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/1.PNG" >
+                            <img src="./img/1.jpg" >
                         </div>
                         <div class="content">
                             <a class="header">Clay House</a>
@@ -130,7 +125,7 @@ if (!isset($_SESSION["Uname"])){
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/3.png">
+                            <img src="./img/3.jpg">
                         </div>
                         <div class="content">
                             <a class="header">Table decor </a>
@@ -146,7 +141,7 @@ if (!isset($_SESSION["Uname"])){
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/basket.png">
+                            <img src="./img/basket.jpeg">
                         </div>
                         <div class="content">
                             <a class="header">Paper Basket </a>
@@ -163,7 +158,7 @@ if (!isset($_SESSION["Uname"])){
                                     </div>
                                 </div>
                             </div>
-                            <img src="./img/wall.PNG" >
+                            <img src="./img/wall.jpg" >
                         </div>
                         <div class="content">
                             <a class="header">Wall Decor</a>
